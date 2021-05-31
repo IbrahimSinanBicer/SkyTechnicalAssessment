@@ -32,7 +32,7 @@ public class SkyMockAPI {
 
     @BeforeClass
     public void beforeClass(){
-        baseURI = "http://localhost:3000";
+        baseURI = ConfigurationReader.getProperty("SkyMockAPI");
 
         //Filling global variables with dummy data
         //Fixture > (FixtureStatus <=> FootballFullSate) > (Goals <=> Teams)
@@ -92,7 +92,7 @@ public class SkyMockAPI {
 
     }
 
-    @Test
+    @Test(priority = 1)
     public void retrieveAllFixtures(){
 
         //GET all fixtures and store them in a List
@@ -120,7 +120,7 @@ public class SkyMockAPI {
 
     }
 
-    @Test
+    @Test(priority = 2)
     public void storeNewFixture() {
 
         //POST the new Fixture
@@ -154,7 +154,7 @@ public class SkyMockAPI {
 
     }
 
-    @Test
+    @Test(priority = 3)
     public void updateFixture(){
 
         //Get the all fixtures first and store them in a List
@@ -246,7 +246,7 @@ public class SkyMockAPI {
 
     }
 
-    @Test
+    @Test(priority = 4)
     public void deleteFixture(){
 
         //Get the all fixtures first and store them in a List

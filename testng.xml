@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Sky API Test" verbose="1">
+    <test name="Sky API Test">
+        <classes>
+            <class name="AutomationTestAPI.SkyMockAPI">
+
+            </class>
+        </classes>
+    </test>
+</suite>
